@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phone Jeopardy · Topic 17</title>
+<style>
+:root{color-scheme:dark;--bg:#10162e;--ink:#fff;--muted:#b7c2df;--panel:#1c2545;--line:#354263}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top left,#233570,transparent 65%),var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:12px;color:inherit;font-weight:700;transition:transform .15s,background .15s}button:hover:not(:disabled){transform:translateY(-2px)}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #fff;outline-offset:4px}button:disabled{cursor:default}main{max-width:1440px;margin:auto;padding:28px}header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:22px}.eyebrow{font-size:13px;letter-spacing:3px;color:#8edbff;font-weight:700}h1{font-size:clamp(30px,4vw,54px);margin:7px 0}h1 span{color:#ffd573}.subtitle{color:var(--muted);margin:0;font-size:16px}.tools{display:flex;gap:10px;flex-wrap:wrap}.utility{padding:13px 17px;background:var(--panel);border:1px solid var(--line)}.timer-toggle[aria-pressed=true]{background:#254d43;border-color:#57d8aa}.board{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.category{display:flex;align-items:center;justify-content:center;text-align:center;min-height:84px;padding:13px 8px;border-top:4px solid var(--accent);border-radius:13px;background:var(--panel);font-size:clamp(13px,1.45vw,21px);font-weight:800;line-height:1.25}.tile{background:var(--accent);color:#10162e;min-height:86px;font-size:clamp(28px,3.6vw,49px);box-shadow:inset 0 -5px 0 #0002}.tile.used{opacity:.25;box-shadow:none}.status{display:flex;justify-content:space-between;color:var(--muted);font-size:14px;gap:12px;margin:16px 0 22px}.teams-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.teams-top h2{margin:0;font-size:23px}.teams-top label{color:var(--muted)}select,input{color:white;background:#131b35;border:1px solid var(--line);border-radius:8px;padding:9px}select{margin-left:8px}.teams{display:grid;grid-template-columns:repeat(var(--count),minmax(0,1fr));gap:12px;margin-top:12px}.team{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--team-color);border-radius:14px;padding:15px}.name-label{font-size:12px;color:var(--muted);display:block;margin-bottom:6px}.team input{width:100%;font-weight:700;font-size:17px}.score{font-size:38px;font-weight:800;text-align:center;margin:12px 0;color:var(--team-color)}.score-controls{display:flex;gap:8px}.score-controls button{flex:1;padding:11px 4px;background:#303d60;font-size:17px}.score-controls .plus{background:#275246}.score-controls .minus{background:#57374c}.step{font-size:13px;color:var(--muted);margin:12px 0 0}dialog{padding:0;border:1px solid #53618a;border-radius:24px;background:#182140;color:white;width:min(1100px,94vw);max-height:94dvh;box-shadow:0 30px 100px #0009}dialog::backdrop{background:#070b20ec}.question-panel{padding:32px}.question-top{display:flex;justify-content:space-between;align-items:center;gap:20px}.question-category{color:#8edbff;font-size:17px;font-weight:800;line-height:1.3}.value{color:#ffd573;margin-top:7px;font-weight:700}.clock{font-weight:800;font-size:28px;background:#253353;border-radius:12px;padding:12px 16px;white-space:nowrap}.clock.urgent{color:#ffb1bd;background:#5c2c40}.question{font-size:clamp(27px,4vw,49px);line-height:1.25;text-align:center;margin:38px 0;overflow-wrap:anywhere}.answer{background:#214a43;border:1px solid #4baa88;color:#b6ffe0;border-radius:15px;padding:20px;text-align:center;font-weight:700;font-size:clamp(24px,3vw,36px);margin-bottom:25px;overflow-wrap:anywhere}.answer[hidden]{display:none}.modal-controls{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.primary{background:#ffd573;color:#172039;padding:15px 24px;font-size:18px}.secondary{background:#303e65;padding:15px 24px;font-size:18px}.question-panel .teams{margin-top:25px}.question-panel .score{font-size:28px;margin:7px 0}.question-panel .team{padding:12px}.modal-name{font-size:16px;font-weight:bold;overflow-wrap:anywhere}.footnote{text-align:center;font-size:12px;color:#8d9abb;margin-top:23px}
+@media(min-width:1500px){main{padding-top:40px}.tile{min-height:104px}}
+@media(max-width:700px){main{padding:16px 10px}header{display:block}.tools{margin-top:15px}.utility{font-size:13px;padding:10px 12px}.board{gap:5px}.category{font-size:10px;min-height:79px;padding:7px 3px;border-radius:8px;overflow-wrap:anywhere}.tile{min-height:66px;font-size:27px;border-radius:8px}.status{font-size:12px}.teams{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.team{padding:10px}.team input{font-size:15px}.question-panel{padding:20px 14px}.question{margin:28px 0}.question-category{font-size:13px}.clock{font-size:22px;padding:9px}.question-panel .score-controls button{font-size:14px}.teams-top h2{font-size:20px}.teams-top label{font-size:13px}}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
+</style>
+</head>
+<body>
+<main>
+<header><div><div class="eyebrow">TOPIC 17 · CLASSROOM GAME</div><h1>Phone <span>Jeopardy!</span></h1><p class="subtitle">Pick a category. Take a challenge. Win points!</p></div><div class="tools"><button class="utility timer-toggle" id="timerToggle" aria-pressed="true">Timer: ON · 30s</button><button class="utility" id="playAgain">↻ Play Again</button></div></header>
+<div class="board" id="board" aria-label="Jeopardy board"></div>
+<div class="status"><span id="progress" aria-live="polite">0 / 25 questions played</span><span>Choose a tile to set the scoring value.</span></div>
+<section aria-label="Team scores"><div class="teams-top"><h2>🏆 Team scores</h2><label>Teams<select id="teamCount" aria-label="Number of teams"><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></label></div><div id="teams" class="teams"></div><p class="step" id="step">Score buttons: ±100 points. Pick a tile to change this value.</p></section>
+<div class="footnote">25 challenges · 5 categories · Ready to play offline</div>
+</main>
+<dialog id="questionDialog" aria-labelledby="questionText"><div class="question-panel"><div class="question-top"><div><div id="questionCategory" class="question-category"></div><div id="questionValue" class="value"></div></div><div id="clock" class="clock" role="timer" aria-label="Countdown">30s</div></div><h2 id="questionText" class="question"></h2><div id="answer" class="answer" hidden></div><div class="modal-controls"><button id="showAnswer" class="primary">Show Answer</button><button id="back" class="secondary">Back to Board</button><button id="modalTimerToggle" class="utility timer-toggle" aria-pressed="true">Timer: ON</button></div><div id="modalTeams" class="teams" aria-label="Award or subtract points"></div></div></dialog>
+<script>
+/* BỘ CÂU HỎI: Sửa nội dung trong khối QUESTION_DATA bên dưới.
+   title = tên chủ đề; points = số điểm; question = câu hỏi; answer = đáp án.
+   Giữ 5 chủ đề, mỗi chủ đề 5 câu với điểm 100, 200, 300, 400, 500.
+   Nội dung được hiển thị nguyên văn bằng textContent (không cần viết HTML). */
+const QUESTION_DATA = [
+ {title:'PARTS OF A PHONE',items:[
+  {points:100,question:'It takes photos. What is it?',answer:'camera'},
+  {points:200,question:'It covers and protects the phone.',answer:'phone case'},
+  {points:300,question:'You need it when your battery is low.',answer:'charger'},
+  {points:400,question:'It shows pictures and words.',answer:'screen'},
+  {points:500,question:'It stores the information you need to use your phone.',answer:'SIM card'}]},
+ {title:'PHONE ACTIONS',items:[
+  {points:100,question:'"Let me put in the PIN to ___ my phone."',answer:'unlock'},
+  {points:200,question:'Move your finger across the screen to see the next photo. You ___ right.',answer:'swipe'},
+  {points:300,question:'"What was the last app that you ___?"',answer:'downloaded'},
+  {points:400,question:'"Victor ___ me a voicemail. He asked me to call him back."',answer:'sent'},
+  {points:500,question:'"Lucy ___ her sister. They talked about their holiday at the beach."',answer:'called'}]},
+ {title:'COUNTABLE OR UNCOUNTABLE?',items:[
+  {points:100,question:'Is "water" countable or uncountable?',answer:'uncountable'},
+  {points:200,question:'Which word is countable: money, air, notebook?',answer:'notebook'},
+  {points:300,question:'Which 2 words are uncountable: chairs, advice, cars, news?',answer:'advice, news'},
+  {points:400,question:'Complete: "four ___ of bread"',answer:'slices'},
+  {points:500,question:'Choose the correct one: "There are some milks" or "There is some milk"?',answer:'There is some milk.'}]},
+ {title:'A / AN / SOME',items:[
+  {points:100,question:'I have ___ apple in my bag.',answer:'an'},
+  {points:200,question:'Can you give me ___ water, please?',answer:'some'},
+  {points:300,question:'My father is ___ doctor.',answer:'a'},
+  {points:400,question:'It will take us about ___ hour to get there.',answer:'an'},
+  {points:500,question:"She's ___ honest person.",answer:'an (vì chữ "h" không đọc)'}]},
+ {title:'READING',items:[
+  {points:100,question:'Who invented the telephone?',answer:'Alexander Graham Bell'},
+  {points:200,question:'Why was Bell interested in sound and speech?',answer:'Because his mother was deaf.'},
+  {points:300,question:'When did Bell make the first telephone call?',answer:'March 10, 1876'},
+  {points:400,question:'When were the first mobile phones introduced?',answer:'In the 1980s'},
+  {points:500,question:'What new feature was introduced in mobile phones in the 1990s?',answer:'Text messaging'}]}
+];
+// PHẦN ĐIỀU KHIỂN GAME: không cần sửa khi chỉ thay câu hỏi.
+const colors=['#85d6ff','#bc9cff','#ffafc5','#ffd573','#6fe0c2'];
+const $=id=>document.getElementById(id);
+const teams=Array.from({length:4},(_,i)=>({name:'Team '+(i+1),score:0}));
+let teamCount=2,used=new Set(),current=null,scoreStep=100,timerEnabled=true,remaining=30,timerId=null,deadline=0,answerShown=false;
+function element(tag,className,text){const e=document.createElement(tag);if(className)e.className=className;if(text!==undefined)e.textContent=text;return e;}
+function renderBoard(){
+ const board=$('board');board.replaceChildren();
+ QUESTION_DATA.forEach((cat,i)=>{const head=element('div','category',cat.title);head.style.setProperty('--accent',colors[i]);board.append(head);});
+ for(let r=0;r<5;r++)QUESTION_DATA.forEach((cat,c)=>{const item=cat.items[r],key=c+'-'+r;const b=element('button','tile'+(used.has(key)?' used':''),item.points);b.style.setProperty('--accent',colors[c]);b.disabled=used.has(key);b.setAttribute('aria-label',cat.title+', '+item.points+' points'+(b.disabled?', played':''));b.dataset.key=key;b.addEventListener('click',()=>openQuestion(c,r));board.append(b);});
+ $('progress').textContent=used.size+' / 25 questions played'+(used.size===25?' · All challenges complete!':'');
+}
+function renderTeams(){
+ for(const [id,modal] of [['teams',false],['modalTeams',true]]){
+ const box=$(id);box.replaceChildren();box.style.setProperty('--count',teamCount);
+ teams.slice(0,teamCount).forEach((team,i)=>{
+  const card=element('div','team');card.style.setProperty('--team-color',colors[i]);
+  if(modal){const name=element('div','modal-name',team.name.trim()||'Team '+(i+1));name.dataset.teamName=i;card.append(name);}
+  else{const label=element('label','name-label','TEAM '+(i+1)+' NAME');label.htmlFor='teamName'+i;const input=element('input');input.id=label.htmlFor;input.value=team.name;input.maxLength=32;input.addEventListener('input',()=>{team.name=input.value;const name=$('modalTeams').querySelector('[data-team-name="'+i+'"]');if(name)name.textContent=team.name.trim()||'Team '+(i+1);});card.append(label,input);}
+  const score=element('div','score',team.score);score.dataset.teamScore=i;score.setAttribute('aria-live','polite');card.append(score);
+  const controls=element('div','score-controls');for(const sign of [-1,1]){const b=element('button',sign===1?'plus':'minus',(sign===1?'+':'−')+scoreStep);b.setAttribute('aria-label',(sign===1?'Add ':'Subtract ')+scoreStep+' points '+(sign===1?'to ':'from ')+(team.name.trim()||'Team '+(i+1)));b.addEventListener('click',()=>{team.score+=sign*scoreStep;document.querySelectorAll('[data-team-score="'+i+'"]').forEach(e=>e.textContent=team.score);});controls.append(b);}card.append(controls);box.append(card);
+ });
+ }
+ $('step').textContent='Score buttons: ±'+scoreStep+' points. Pick a tile to change this value.';
+}
+function stopTimer(){if(timerId!==null)clearInterval(timerId);timerId=null;}
+function drawClock(){const clock=$('clock');clock.textContent=timerEnabled?(remaining===0?"Time’s up!":remaining+'s'):'Timer OFF';clock.classList.toggle('urgent',timerEnabled&&remaining<=5);}
+function startTimer(){stopTimer();if(!timerEnabled||answerShown||!$('questionDialog').open||remaining<=0){drawClock();return;}deadline=Date.now()+remaining*1000;timerId=setInterval(()=>{remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));drawClock();if(remaining===0)stopTimer();},100);drawClock();}
+function openQuestion(c,r){
+ current={c,r,item:QUESTION_DATA[c].items[r]};used.add(c+'-'+r);scoreStep=current.item.points;answerShown=false;remaining=30;stopTimer();renderBoard();renderTeams();
+ $('questionCategory').textContent=QUESTION_DATA[c].title;$('questionValue').textContent=scoreStep+' POINTS';$('questionText').textContent=current.item.question;$('answer').textContent=current.item.answer;$('answer').hidden=true;$('showAnswer').disabled=false;$('showAnswer').textContent='Show Answer';$('questionDialog').showModal();startTimer();
+}
+function back(){stopTimer();$('questionDialog').close();if(current){const tile=$('board').querySelector('[data-key="'+current.c+'-'+current.r+'"]');const next=[...$('board').querySelectorAll('.tile')].find(b=>!b.disabled);(next||$('playAgain')).focus();}}
+function toggleTimer(){if(timerEnabled&&timerId!==null)remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));timerEnabled=!timerEnabled;for(const id of ['timerToggle','modalTimerToggle']){$(id).setAttribute('aria-pressed',String(timerEnabled));$(id).textContent='Timer: '+(timerEnabled?'ON':'OFF')+(id==='timerToggle'?' · 30s':'');}startTimer();}
+$('timerToggle').addEventListener('click',toggleTimer);$('modalTimerToggle').addEventListener('click',toggleTimer);
+$('showAnswer').addEventListener('click',()=>{answerShown=true;stopTimer();$('answer').hidden=false;$('showAnswer').disabled=true;$('showAnswer').textContent='Answer shown';});
+$('back').addEventListener('click',back);$('questionDialog').addEventListener('cancel',e=>{e.preventDefault();back();});$('questionDialog').addEventListener('close',stopTimer);
+$('teamCount').addEventListener('change',e=>{teamCount=Number(e.target.value);renderTeams();});
+$('playAgain').addEventListener('click',()=>{stopTimer();if($('questionDialog').open)$('questionDialog').close();used.clear();current=null;scoreStep=100;remaining=30;answerShown=false;teams.forEach(t=>t.score=0);renderBoard();renderTeams();drawClock();});
+renderBoard();renderTeams();drawClock();
+</script>
+</body>
+</html>
